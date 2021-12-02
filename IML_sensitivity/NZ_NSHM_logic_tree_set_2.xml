@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nrml xmlns:gml="http://www.opengis.net/gml"
+      xmlns="http://openquake.org/xmlns/nrml/0.4">
+    <logicTree logicTreeID='lt1'>
+
+        <logicTreeBranchingLevel branchingLevelID="bl1">
+            <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs1"
+                    applyToTectonicRegionType="Active Shallow Crust">
+
+                <logicTreeBranch branchID="ASK2014">
+            <uncertaintyModel>AbrahamsonEtAl2014</uncertaintyModel>
+                    <uncertaintyWeight>0.2</uncertaintyWeight>
+                </logicTreeBranch>
+                <logicTreeBranch branchID="BSSA2014">
+            <uncertaintyModel>BooreEtAl2014</uncertaintyModel>
+                    <uncertaintyWeight>0.2</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID="CB2014">
+            <uncertaintyModel>CampbellBozorgnia2014</uncertaintyModel>
+                    <uncertaintyWeight>0.2</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID="CY2014">
+            <uncertaintyModel>ChiouYoungs2014</uncertaintyModel>
+                    <uncertaintyWeight>0.2</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID="Bradley2013">
+            <uncertaintyModel>Bradley2013</uncertaintyModel>
+                    <uncertaintyWeight>0.2</uncertaintyWeight>
+                </logicTreeBranch>
+
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+        <logicTreeBranchingLevel branchingLevelID="bl2">
+            <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs2"
+                    applyToTectonicRegionType="Volcanic">
+
+                <logicTreeBranch branchID="Bradley2013Volc">
+                <uncertaintyModel>Bradley2013Volc</uncertaintyModel>
+                    <uncertaintyWeight>1.0</uncertaintyWeight>
+                </logicTreeBranch>
+
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+        <logicTreeBranchingLevel branchingLevelID="bl3">
+            <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs3"
+                    applyToTectonicRegionType="Subduction Interface">
+
+                <logicTreeBranch branchID= "AbrahamsonGulerece2020SI_NZ">
+                    <uncertaintyModel>[AbrahamsonGulerce2020SInter]
+                        region = "NZL"
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.35</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID= "AbrahamsonGulerece2020SI_GLO">
+                    <uncertaintyModel>[AbrahamsonGulerce2020SInter]
+                        region = "GLO"
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.1</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID= "ParkerEtAl2020SI_GLO">
+                    <uncertaintyModel>[ParkerEtAl2020SInter]
+                        m_b = 7.9
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.1</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID= "Kuehn2020I_NZ">
+                    <uncertaintyModel>[KuehnEtAl2020SInter]
+                        region = "NZL"
+                        m_b = 8.3
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.35</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID= "Kuehn2020I_GLO">
+                    <uncertaintyModel>[KuehnEtAl2020SInter]
+                        region = "GLO"
+                        m_b = 7.9
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.1</uncertaintyWeight>
+                </logicTreeBranch>
+
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+        <logicTreeBranchingLevel branchingLevelID="bl4">
+            <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs4"
+                    applyToTectonicRegionType="Subduction Intraslab">
+
+                <logicTreeBranch branchID= "AbrahamsonGulerece2020SS_NZ">
+                    <uncertaintyModel>[AbrahamsonGulerce2020SSlab]
+                        region = "NZL"
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.35</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID= "AbrahamsonGulerece2020SS_GLO">
+                    <uncertaintyModel>[AbrahamsonGulerce2020SSlab]
+                        region = "GLO"
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.1</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID= "ParkerEtAl2020SS_GLO">
+                    <uncertaintyModel>[ParkerEtAl2020SSlab]
+                        m_b = 7.6
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.1</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID= "Kuehn2020SS_NZ">
+                    <uncertaintyModel>[KuehnEtAl2020SSlab]
+                        region = "NZL"
+                        m_b = 7.6
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.35</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID= "Kuehn2020SS_GLO">
+                    <uncertaintyModel>[KuehnEtAl2020SSlab]
+                        region = "GLO"
+                        m_b = 7.6
+                    </uncertaintyModel>
+                    <uncertaintyWeight>0.1</uncertaintyWeight>
+                </logicTreeBranch>
+
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+    </logicTree>
+</nrml>
