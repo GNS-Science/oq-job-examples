@@ -1,4 +1,4 @@
-# oq-haz-example
+# hik-example001
 An example workout for hazard calculation using OpenQuake to generate a hazard map. This example is based on Grand Inversion ERF model for Hikurangi-interface. 
 
 ## Setup conda environment
